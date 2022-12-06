@@ -9,11 +9,13 @@ import com.plcoding.core.domain.model.Gender
 import com.plcoding.core.domain.preferences.Preferences
 import com.plcoding.core.navigation.Route
 import com.plcoding.core.util.UiEvent
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@HiltViewModel
 class GenderViewModel @Inject constructor(
     private val preferences: Preferences
 ): ViewModel() {
@@ -33,5 +35,4 @@ class GenderViewModel @Inject constructor(
             _uiEvent.send(UiEvent.Navigate(Route.AGE))
         }
     }
-
 }
