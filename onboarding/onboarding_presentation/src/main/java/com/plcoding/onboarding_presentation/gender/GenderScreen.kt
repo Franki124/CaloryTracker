@@ -33,11 +33,13 @@ fun GenderScreen(
             }
         }
     }
-    Box(modifier = Modifier
-        .fillMaxSize()
-        .padding(spacing.spaceLarge)
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(spacing.spaceLarge)
     ) {
-        Column(modifier = Modifier.fillMaxSize(),
+        Column(
+            modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -47,18 +49,18 @@ fun GenderScreen(
             )
             Spacer(modifier = Modifier.height(spacing.spaceMedium))
             Row {
-               SelectableButton(
-                   text = stringResource(id = R.string.male),
-                   isSelected = viewModel.selectedGender is Gender.Male,
-                   color = MaterialTheme.colors.primaryVariant,
-                   selectedTextColor = Color.White,
-                   onClick = {
-                       viewModel.onGenderClick(Gender.Male)
-                   },
-                   textStyle = MaterialTheme.typography.button.copy(
-                       fontWeight = FontWeight.Normal
-                   )
-               )
+                SelectableButton(
+                    text = stringResource(id = R.string.male),
+                    isSelected = viewModel.selectedGender is Gender.Male,
+                    color = MaterialTheme.colors.primaryVariant,
+                    selectedTextColor = Color.White,
+                    onClick = {
+                        viewModel.onGenderClick(Gender.Male)
+                    },
+                    textStyle = MaterialTheme.typography.button.copy(
+                        fontWeight = FontWeight.Normal
+                    )
+                )
                 Spacer(modifier = Modifier.width(spacing.spaceMedium))
                 SelectableButton(
                     text = stringResource(id = R.string.female),

@@ -19,6 +19,7 @@ import javax.inject.Inject
 class GenderViewModel @Inject constructor(
     private val preferences: Preferences
 ): ViewModel() {
+
     var selectedGender by mutableStateOf<Gender>(Gender.Male)
         private set
 
