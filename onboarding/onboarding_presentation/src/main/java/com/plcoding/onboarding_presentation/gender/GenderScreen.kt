@@ -37,7 +37,7 @@ fun GenderScreen(
         .fillMaxSize()
         .padding(spacing.spaceLarge)
     ) {
-        Column(modifier = Modifier,
+        Column(modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
