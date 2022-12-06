@@ -8,6 +8,7 @@ sealed class Gender(val name: String) {
         fun fromString(name: String): Gender {
             return when(name) {
                 "male" -> Male
+                "female" -> Female
                 else -> Female
             }
         }

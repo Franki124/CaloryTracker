@@ -18,7 +18,7 @@ fun UnitTextField(
     value: String,
     onValueChange: (String) -> Unit,
     unit: String,
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     textStyle: TextStyle = TextStyle(
         color = MaterialTheme.colors.primaryVariant,
         fontSize = 70.sp
@@ -26,7 +26,7 @@ fun UnitTextField(
 ) {
     val spacing = LocalSpacing.current
     Row(
-        modifier = Modifier,
+        modifier = modifier,
         horizontalArrangement = Arrangement.Center
     ) {
         BasicTextField(
@@ -40,11 +40,11 @@ fun UnitTextField(
             modifier = Modifier
                 .width(IntrinsicSize.Min)
                 .alignBy(LastBaseline)
-            )
+        )
         Spacer(modifier = Modifier.width(spacing.spaceSmall))
         Text(
             text = unit,
             modifier = Modifier.alignBy(LastBaseline)
-            )
+        )
     }
 }

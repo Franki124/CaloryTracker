@@ -17,7 +17,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providerShredPreferences(
+    fun provideSharedPreferences(
         app: Application
     ): SharedPreferences {
         return app.getSharedPreferences("shared_pref", MODE_PRIVATE)
@@ -25,7 +25,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providerPreferences(sharedPreferences: SharedPreferences): Preferences {
+    fun providePreferences(sharedPreferences: SharedPreferences): Preferences {
         return DefaultPreferences(sharedPreferences)
     }
 }

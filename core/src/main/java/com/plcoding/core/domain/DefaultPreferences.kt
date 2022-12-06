@@ -9,7 +9,7 @@ import com.plcoding.core.domain.preferences.Preferences
 
 class DefaultPreferences(
     private val sharedPref: SharedPreferences
-): Preferences{
+): Preferences {
     override fun saveGender(gender: Gender) {
         sharedPref.edit()
             .putString(Preferences.KEY_GENDER, gender.name)
@@ -69,7 +69,8 @@ class DefaultPreferences(
         val height = sharedPref.getInt(Preferences.KEY_HEIGHT, -1)
         val weight = sharedPref.getFloat(Preferences.KEY_WEIGHT, -1f)
         val genderString = sharedPref.getString(Preferences.KEY_GENDER, null)
-        val activityLevelString = sharedPref.getString(Preferences.KEY_ACTIVITY_LEVEL, null)
+        val activityLevelString = sharedPref
+            .getString(Preferences.KEY_ACTIVITY_LEVEL, null)
         val goalType = sharedPref.getString(Preferences.KEY_GOAL_TYPE, null)
         val carbRatio = sharedPref.getFloat(Preferences.KEY_CARB_RATIO, -1f)
         val proteinRatio = sharedPref.getFloat(Preferences.KEY_PROTEIN_RATIO, -1f)
@@ -79,7 +80,7 @@ class DefaultPreferences(
             gender = Gender.fromString(genderString ?: "male"),
             age = age,
             weight = weight,
-            height= height,
+            height = height,
             activityLevel = ActivityLevel.fromString(activityLevelString ?: "medium"),
             goalType = GoalType.fromString(goalType ?: "keep_weight"),
             carbRatio = carbRatio,

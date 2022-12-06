@@ -6,7 +6,6 @@ import com.plcoding.core.domain.model.GoalType
 import com.plcoding.core.domain.model.UserInfo
 
 interface Preferences {
-
     fun saveGender(gender: Gender)
     fun saveAge(age: Int)
     fun saveWeight(weight: Float)
