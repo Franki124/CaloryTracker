@@ -7,5 +7,4 @@ data class TrackableFood(
     val carbsPer100g: Int,
     val proteinPer100g: Int,
     val fatPer100g: Int,
-) {
-}
+)
